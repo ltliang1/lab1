@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background:
+        url(../images/bg.png),
+        linear-gradient(black, black, black, #000020);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-attachment: fixed;
+
+    font-size: 100%;
+}
+
+    #container header {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        background: silver;
+    }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+                nav ul li {
+                    list-style-type: none;
+                    margin: 1.063rem;
+                }
+
+                nav ul li a {
+                    color: white;
+                    font-size: 1.063rem;
+                    font-family: "Roboto";
+                    font-weight: 100;
+
+                    text-decoration: none;
+                }
+
+                nav ul li a:hover {
+                    color: black;
+                }
+
+                #current {
+                    color: black;
+                }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        animation: 1s fadeinTop;
+    }
+
+        #temp {
+            height: 100px;
+        }
+
+            #title {
+                font-family: "Roboto";
+                font-weight: 100;
+                font-size: 3vw;
+                color: white;
+
+                text-align: center;
+            }
+
+            #breaktemp {
+                height: 2vw;
+            }
+
+            #youtube, #tritones, #stmap {
+                font-family: "Courier";
+                font-weight: 100;
+                font-size: 1vw;
+                line-height: 1.5vw;
+                color: white;
+
+                text-align: center;
+            }
+
+            #channel {
+                text-decoration: none;
+                font-style: bold;
+                color: red;
+            }
+
+            #playlist {
+                margin-top: 0.5vw;
+
+                border: 2px solid white;
+                width: 60vw;
+                height: 33.8vw;
+            }
+
+            #tritonespage {
+                text-decoration: none;
+                font-style: bold;
+                color: gold;
+            }
+
+            #spotifyplaylist {
+                margin-top: 0.5vw;
+
+                border: 2px solid white;
+                width: 60vw;
+                height: 23.7vw;
+            }
+
+
+            #stmaplink {
+                text-decoration: none;
+                font-style: bold;
+                color: lightgreen;
+            }
+
+            #ituneslink {
+                text-decoration: none;
+                font-style: bold;
+                color: lightgrey;
+            }
+
+            #stmapimg {
+                margin-top: 0.5vw;
+
+                border: 2px solid white;
+                width: 60vw;
+            }
+
+            #channel:hover, #tritonespage:hover, #stmaplink:hover,
+            #ituneslink:hover {
+                color: silver;
+            }
+
+            @keyframes fadeinTop {
+                from {
+                    transform: translateY(-2vh);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0vh);
+                    opacity: 1;
+                }
+            }

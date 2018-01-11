@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background:
+        url(../images/bg.png),
+        linear-gradient(black, black, black, #000020);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-attachment: fixed;
+
+    font-size: 100%;
+}
+
+    #container header {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        background: silver;
+    }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+                nav ul li {
+                    list-style-type: none;
+                    margin: 1.063rem;
+                }
+
+                nav ul li a {
+                    color: white;
+                    font-size: 1.063rem;
+                    font-family: "Roboto";
+                    font-weight: 100;
+
+                    text-decoration: none;
+                }
+
+                nav ul li a:hover {
+                    color: black;
+                }
+
+                #current {
+                    color: black;
+                }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        animation: 1s fadeinTop;
+    }
+
+        #temp {
+            height: 100px;
+        }
+
+            #title {
+                font-family: "Roboto";
+                font-weight: 100;
+                font-size: 3vw;
+                color: white;
+
+                text-align: center;
+            }
+
+            #breaktemp {
+                height: 2vw;
+            }
+
+            #vis41, #letitsnow {
+                font-family: "Courier";
+                font-weight: 100;
+                font-size: 1vw;
+                line-height: 2vw;
+                color: white;
+
+                text-align: center;
+            }
+
+            #vis41link {
+                text-decoration: none;
+                font-style: bold;
+                color: #D8C0C2;
+            }
+
+            #vis41link:hover {
+                color: silver;
+            }
+
+            #vis41pdf {
+                width: 60vw;
+                height: 42.7vw;
+            }
+
+            #letitsnowlink {
+                text-decoration: none;
+                font-style: bold;
+                color: lightblue;
+            }
+
+            #letitsnowlink:hover {
+                color: silver;
+            }
+
+            #letitsnowimg {
+                width: 45vw;
+            }
+
+        @keyframes fadeinTop {
+            from {
+                transform: translateY(-2vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0vh);
+                opacity: 1;
+            }
+        }

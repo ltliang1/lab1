@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112003305-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-112003305-1');
+        </script>
+        <title>lee liang | contact</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100"
+              rel="stylesheet">
+        <link rel="stylesheet" href="css/contactStyle.css">
+        <script type="text/javascript">
+            //auto expand textarea
+            function adjust_textarea(h) {
+                h.style.height = "20px";
+                h.style.height = (h.scrollHeight)+"px";
+            }
+        </script>
+    </head>
+    <body>
+        <div id ="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="me.html">me</a></li>
+                        <li><a href="design.html">design</a></li>
+                        <li><a href="music.html">music</a></li>
+                        <li><a href="photography.html">photography</a></li>
+                        <li><a id="current" href="contact.html">contact</a></li>
+                        <li><a href="index.html">introHCI</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div id="outer"></div>
+                <h1 id="title">contact me!</h1>
+                <div id="contact">
+                    <form id="contactform" action="contact.php" method="post">
+                        <div id="toprow">
+                            <input type="text" name="name" id="name"
+                                   required="true" placeholder="name*"
+                                   oninvalid="this.setCustomValidity(
+                                   'Please enter your name!')"
+                                   oninput="setCustomValidity('')"><br>
+                            <input type="email" name="email" id="email"
+                                   required="true" placeholder="email*"
+                                   oninvalid="this.setCustomValidity(
+                                   'Please enter your email!')"
+                                   oninput="setCustomValidity('')">
+                        </div>
+                        <textarea name="message" id="message" required="true"
+                                  placeholder="message*"
+                                  oninvalid="this.setCustomValidity(
+                                  'Please send me a message!')"
+                                  oninput="setCustomValidity('')"
+                                  onkeyup="adjust_textarea(this)"></textarea>
+                        <div id="button">
+                            <input type="submit" id="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+</html>

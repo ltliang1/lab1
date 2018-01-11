@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background:
+        url(../images/bg.png),
+        linear-gradient(black, black, black, #000020);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-attachment: fixed;
+}
+
+    #container header {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        background: silver;
+    }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+                nav ul li {
+                    list-style-type: none;
+                    margin: 17px;
+                }
+
+                nav ul li a {
+                    color: white;
+                    font-size: 17px;
+                    font-family: "Roboto";
+                    font-weight: 100;
+
+                    text-decoration: none;
+                }
+
+                nav ul li a:hover {
+                    color: black;
+                }
+
+                #current {
+                    color: black;
+                }
+
+    #intro {
+        display: flex;
+        flex-flow: column;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        #title {
+            font-family: 'Space Mono';
+            font-size: 120px;
+            color: white;
+
+            animation: fadeinBottom 1s;
+        }
+
+        #subtext {
+            font-family: courier;
+            font-size: 16px;
+            word-spacing: 10px;
+            color: silver;
+
+            opacity: 0;
+            animation: 0.6s ease-out 0.4s fadeinBottom;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeinBottom {
+            from {
+                transform: translateY(2vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0vh);
+                opacity: 1;
+            }
+        }

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background:
+        url(../images/bg.png),
+        linear-gradient(black, black, black, #000020);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-attachment: fixed;
+
+    font-size: 100%;
+}
+
+    #container header {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        background: silver;
+    }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+            }
+
+                nav ul li {
+                    list-style-type: none;
+                    margin: 1.063rem;
+                }
+
+                nav ul li a {
+                    color: white;
+                    font-size: 1.063rem;
+                    font-family: "Roboto";
+                    font-weight: 100;
+
+                    text-decoration: none;
+                }
+
+                nav ul li a:hover {
+                    color: black;
+                }
+
+                #current {
+                    color: black;
+                }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        animation: 1s fadeinLeft;
+    }
+
+        #temp {
+            height: 100px;
+        }
+
+            #title {
+                font-family: "Roboto";
+                font-weight: 100;
+                font-size: 3vw;
+                color: white;
+
+                text-align: center;
+            }
+
+            #breaktemp {
+                height: 2vw;
+            }
+
+            #about {
+                max-width: 27%;
+                height: auto;
+
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+                #picture {
+                    transition: 0.5s ease;
+                }
+
+                #picture img {
+                    opacity: 1;
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    box-shadow: -5px 5px 10px blue, -10px 10px 10px red,
+                                                   -15px 15px 10px green;
+                }
+
+                #description {
+                    position: absolute;
+                    top: 0%;
+
+                    opacity: 0;
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    padding: 0.7vw 1.2vw;
+
+                    font-family: courier;
+                    color: white;
+                    font-size: 1.05vw;
+                    line-height: 1.8vw;
+                    text-align: justify;
+
+                    transition: 0.5s ease;
+                }
+
+            #about:hover #picture {
+                opacity: 0.3;
+            }
+
+            #about:hover #description {
+                opacity: 1;
+            }
+
+        #res {
+            text-decoration: none;
+            font-style: bold;
+            color: #D9C1C3;
+        }
+
+        #res:hover {
+            color: #5D2025;
+        }
+
+        @keyframes fadeinLeft {
+            from {
+                transform: translateX(-2vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0vh);
+                opacity: 1;
+            }
+        }
